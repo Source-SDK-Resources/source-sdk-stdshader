@@ -8,7 +8,7 @@ $Macro SRCDIR		"..\.."
 
 // shader_dll_verify.cpp defines a function called _ftol3. This means that we can't
 // link with the bug-fixed ftol3.obj. It also means we can't convert float-to-unsigned.
-$Conditional DISABLE_FTOL3_OVERRIDE "1" [!$SOURCESDK]
+$Conditional DISABLE_FTOL3_OVERRIDE "1"
 
 $Include "$SRCDIR\vpc_scripts\source_dll_base.vpc"
 
@@ -158,7 +158,7 @@ $Project
 		$File	"writez_dx9.cpp"
 		$File	"writestencil_dx9.cpp"
 
-		$Folder	"Remove me when VAC2 is out" [$WINDOWS && !$SOURCESDK]
+		$Folder	"Remove me when VAC2 is out" [$WINDOWS]
 		{
 			$File	"$SRCDIR\tier1\checksum_crc.cpp"
 			$File	"$SRCDIR\tier1\checksum_md5.cpp"

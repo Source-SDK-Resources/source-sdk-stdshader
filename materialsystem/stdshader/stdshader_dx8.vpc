@@ -126,7 +126,8 @@ $Project "stdshader_dx8"
 
 	$Folder	"Link Libraries"
 	{
-		$File	"$SRCDIR\dx9sdk\lib\d3dx9.lib"
+		$File	"$SRCDIR\dx9sdk\lib\x64\d3dx9.lib"			[$WIN64]
+		$File	"$SRCDIR\dx9sdk\lib\x86\d3dx9.lib"			[$WIN32]
 		$Lib mathlib
 		$Lib shaderlib
 		$Lib	tier2
