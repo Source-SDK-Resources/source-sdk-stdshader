@@ -1,4 +1,4 @@
-//====== Copyright © 1996-2005, Valve Corporation, All rights reserved. =======
+//====== Copyright ï¿½ 1996-2005, Valve Corporation, All rights reserved. =======
 //
 // Purpose: 
 //
@@ -49,7 +49,7 @@ void __declspec( dllexport ) _ftol3( char *pData )
 {
 	pData += SHADER_DLL_VERIFY_DATA_PTR_OFFSET;
 	char *pToFillIn = (char*)&g_Blah;
-	memcpy( pData, &pToFillIn, 4 );
+	memcpy( pData, &pToFillIn, sizeof(void*) );
 }
 
 
